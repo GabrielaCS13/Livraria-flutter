@@ -28,31 +28,31 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("AppCrudSQLITE"),
+        title: const Text("AppCrudSQLITE"),
       ),
       body: Container(
         alignment: Alignment.topCenter,
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         child: Column(children: [
-          SizedBox(height: 200),
+          const SizedBox(height: 200),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) {
+                return AddBooks();
+              }));
+            },
+            child: const Text("Adicionar"),
+          ),
+          const SizedBox(height: 40),
           ElevatedButton(
             onPressed: () {
               // Navigator.push(context,
-              // MaterialPageRoute(builder: (BuildContext context) {
-              //return AddBooks();
-              // }));
-            },
-            child: Text("Adicionar"),
-          ),
-          SizedBox(height: 40),
-          ElevatedButton(
-            onPressed: () {
-              //Navigator.push(context,
-              // MaterialPageRoute(builder: (BuildContext context) {
+              //     MaterialPageRoute(builder: (BuildContext context) {
               //  return ListBooks();
               //  }));
             },
-            child: Text("Listar"),
+            child: const Text("Listar"),
           ),
         ]),
       ),

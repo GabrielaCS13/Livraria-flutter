@@ -4,7 +4,7 @@ import 'package:sqflite/sqflite.dart';
 
   
 
-class MyDb { 
+class Dblivro { 
 
   late Database db; 
 
