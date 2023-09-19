@@ -44,7 +44,7 @@ class Dblivro {
 
                         autor varchar(255) not null,
 
-                        preco varchar( 8) not null, 
+                        preco varchar(8) not null, 
 
                         roll_no int not null
 

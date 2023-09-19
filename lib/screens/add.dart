@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'package:appcrudsqlite/data/dblivro.dart';
 
-class AddBooks extends StatefulWidget {
+class AddLivro extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _AddBooks();
+    return _AddLivro();
   }
 }
 
-class _AddBooks extends State<AddBooks> {
+class _AddLivro extends State<AddLivro> {
   TextEditingController nome = TextEditingController();
 
   TextEditingController descricao = TextEditingController();
@@ -74,7 +74,7 @@ class _AddBooks extends State<AddBooks> {
               ElevatedButton(
                   onPressed: () {
                     mydb.db.rawInsert(
-                        "INSERT INTO livro(nome, descicao, autor, preco, roll_no) VALUES (?, ?, ?, ?, ?);",
+                        "INSERT INTO livro(nome, descricao, autor, preco, roll_no) VALUES (?, ?, ?, ?, ?);",
                         [
                           nome.text,
                           descricao.text,

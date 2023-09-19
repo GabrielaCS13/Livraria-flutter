@@ -39,7 +39,7 @@ class _HomeState extends State<Home> {
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (BuildContext context) {
-                return AddBooks();
+                return AddLivro();
               }));
             },
             child: const Text("Adicionar"),
@@ -47,10 +47,10 @@ class _HomeState extends State<Home> {
           const SizedBox(height: 40),
           ElevatedButton(
             onPressed: () {
-              // Navigator.push(context,
-              //     MaterialPageRoute(builder: (BuildContext context) {
-              //  return ListBooks();
-              //  }));
+               Navigator.push(context,
+                   MaterialPageRoute(builder: (BuildContext context) {
+                return ListLivro();
+                }));
             },
             child: const Text("Listar"),
           ),
