@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'package:appcrudsqlite/data/dblivro.dart';
 
-//import 'package:appcrudsqlite/edit.dart';
+import 'package:appcrudsqlite/screens/edit.dart';
 
 class ListLivro extends StatefulWidget {
   @override
@@ -65,13 +65,10 @@ class _ListLivro extends State<ListLivro> {
                           children: [
                             IconButton(
                                 onPressed: () {
-                                  //Navigator.push(context, MaterialPageRoute(
-
-                                  //  builder: (BuildContext context) {
-
-                                  //    return EditLivro(rollno: stuone["roll_no"]);
-
-                                  //   })); //navigate to edit page, pass student roll no to edit
+                                  Navigator.push(context, MaterialPageRoute(
+                                      builder: (BuildContext context) {
+                                    return Edit(rollno: stuone["roll_no"]);
+                                  })); //navigate to edit page, pass student roll no to edit
                                 },
                                 icon: Icon(Icons.edit)),
                             IconButton(

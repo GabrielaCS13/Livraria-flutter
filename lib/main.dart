@@ -4,6 +4,7 @@ import 'package:appcrudsqlite/screens/add.dart';
 
 import 'package:appcrudsqlite/screens/list.dart';
 
+
 void main() {
   runApp(MyApp());
 }

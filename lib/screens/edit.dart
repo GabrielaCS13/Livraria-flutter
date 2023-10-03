@@ -16,7 +16,6 @@ class Edit extends StatefulWidget {
 }
 
 class _Edit extends State<Edit> {
-  
   TextEditingController nome = TextEditingController();
 
   TextEditingController descricao = TextEditingController();
@@ -26,23 +25,22 @@ class _Edit extends State<Edit> {
   TextEditingController preco = TextEditingController();
 
   TextEditingController roll_no = TextEditingController();
-  
 
-  dblivro mydb = new dblivro();
+  Dblivro mydb = new Dblivro();
 
   @override
   void initState() {
     mydb.open();
 
     Future.delayed(Duration(milliseconds: 500), () async {
-      var data = await mydb.getCarro(
+      var data = await mydb.getLivro(
           widget.rollno); //widget.rollno is passed paramater to this class
 
       if (data != null) {
         nome.text = data["nome"];
 
         descricao.text = data["descricao"];
-        
+
         autor.text = data["autor"];
 
         preco.text = data["preco"];
